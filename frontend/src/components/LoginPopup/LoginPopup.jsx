@@ -1,3 +1,4 @@
+import React from 'react';
 import {  useContext, useState } from 'react'
 import './LoginPopup.css'
 import { assets } from '../../assets/assets'
