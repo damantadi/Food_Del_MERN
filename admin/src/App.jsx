@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = 'https://food-del-mern-backend-k188.onrender.com';
+  const url = 'https://food-del-mern-backend-79a8.onrender.com';
 
   return (
     <div>
