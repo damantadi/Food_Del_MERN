@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const FoodItem = ({id,name,price,description,image}) => {
 
     const {cartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
-
+     const itemInCart = cartItems?.[id];
     const handleAddToCart = () => {
         addToCart(id);
         toast.success(`${name} added to cart`);
@@ -22,7 +22,7 @@ const FoodItem = ({id,name,price,description,image}) => {
         <div className="food-item-img-container">
             <img className='food-item-image' src={url+'/images/'+image} alt="" />
             {
-                !cartItems[id] ? <img className='add' onClick={handleAddToCart} src={assets.add_icon_white}/>: 
+                 !itemInCart ? <img className='add' onClick={handleAddToCart} src={assets.add_icon_white}/>: 
                 <div className="food-item-counter">
                     <img style={{cursor:'pointer'}} onClick={handleRemoveFromCart} src={assets.remove_icon_red} alt="" />
                     <p>{cartItems[id]}</p>
